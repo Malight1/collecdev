@@ -40,7 +40,7 @@ function App() {
             if (MINOR_CATEGORIZATION_MAJOR.hasOwnProperty(selections[i])){
                 for (let j = 0; j < MINOR_CATEGORIZATION_MAJOR[selections[i]].length; j++){
                     major_ids.add(MINOR_CATEGORIZATION_MAJOR[selections[i]][j])
-                }
+                }   
             }
         }
 
