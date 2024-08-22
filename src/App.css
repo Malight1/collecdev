@@ -46,9 +46,9 @@ body {
     background-color: var(--jet);
     font-family: 'Montserrat', sans-serif;
     color: white;
-    height: 100%;
+
     overflow: hidden;
-    min-height: 100vh;
+
 }
 
 p {
@@ -514,4 +514,16 @@ table thead {
 
 .tasks h4 {
     font-size: 1.5vw;
+}
+
+
+@media screen and (max-width: 558px) {
+    body{
+        width: 1222px !important;
+        height: 2300px !important;
+    }
+
+    .soc{
+        top: 120% !important;
+    }
 }

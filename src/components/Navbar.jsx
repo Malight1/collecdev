@@ -14,7 +14,7 @@ const Navbar = () => {
 
 
     <div className="links">
-        <a href="">Home</a>
+        <a href="http://www.wizdomia.io/">Home</a>
         <a href="https://wizdomia.gitbook.io/wizdomia-docs/">Whitepaper</a>
     </div>
    </div>
