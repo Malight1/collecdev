@@ -32,12 +32,23 @@
     color: var(--keppel);
 }
 
+.back{
+  
+    
+    background: url(../public/assets/star.jpeg) !important;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  background-color: white;
+}
+
 body {
     background-color: var(--jet);
     font-family: 'Montserrat', sans-serif;
     color: white;
     height: 100%;
     overflow: hidden;
+    min-height: 100vh;
 }
 
 p {

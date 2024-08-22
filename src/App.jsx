@@ -16,6 +16,8 @@ import { IoHome, IoBriefcase, IoSchool } from 'react-icons/io5';
 import {PAGE_STATE} from './constants.jsx';
 import { MAJOR_MINOR_CATEGORIZATION, MINOR_CATEGORIZATION_MAJOR } from "./data/major_minor_categorization";
 import { JOB_MINOR_CATEGORIZATION, MINOR_CATEGORIZATION_JOB} from "./data/job_minor_categorization";
+import Navbar  from './components/Navbar.jsx';
+import Social from './components/Social.jsx';
 
 function App() {
     const [state, setState] = useState(PAGE_STATE["Home"]);
@@ -81,7 +83,10 @@ function App() {
     }
 
     return (
-        <div className='container-fluid'>
+        <div className='container-fluid' >
+            {/* <div className='back' ></div> */}
+            <Navbar/>
+            
             <Tooltip id="my-tooltip" />
             {state != PAGE_STATE["Home"] &&
                 <div className='row'>
@@ -102,15 +107,22 @@ function App() {
                                                           shownMajors={shownMajors}/>}
                 {state == PAGE_STATE["Careers"] && <Career minorSelections={minorSelections}
                                                           shownJobs={shownJobs}/>}
-                {state == PAGE_STATE["Home"] && 
+                {/* {state == PAGE_STATE["Home"] && 
                     <img className='logo' src="assets/Pathways-Logo.png" alt="Pathways Logo" />
-                }
+                } */}
                 <P5Page pageState={state}
                         setState={setState}
                         minorSelections={minorSelections}
                         setMinorSelections={handleMinorChange}
                 />
+
+                
             </div>
+                    
+                    
+            <Social/>
+
+
         </div>
     );
 

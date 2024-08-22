@@ -9,6 +9,7 @@ import MinorTags from '../components/MinorTags';
 import {PAGE_STATE, MAJOR_CATEGORIES, MAJOR_COLORS, MAJOR_POSITIONS, MINOR_CATEGORIES, MAJOR_IMG, MINOR_COLORS} from '../constants.jsx';
 import {MINOR_DESCRIPTION_FIRST_PAGE} from '../data/minor_descriptions.jsx';
 import {linearInterpolation} from '../utility.jsx';
+import Social from '../components/Social.jsx';
 
 let numPlanet = MAJOR_CATEGORIES.length;
 let planetSizeRatio = 0.15;
@@ -70,7 +71,7 @@ class P5Page extends React.Component {
 		p5.setup = () => {
 			p5.createCanvas(p5.windowWidth, p5.windowHeight);
 			
-			stars = p5.loadImage("./assets/stars.png");
+			stars = p5.loadImage("./assets/stars.jpeg");
 
 			for (let i = 0; i < numPlanet; i++) {
 				planetImg[i] = p5.loadImage(MAJOR_IMG[i]);
@@ -268,8 +269,8 @@ class P5Page extends React.Component {
 
 	render() {
 		return (	
-			<div id="FirstPageContainer">
-				<div className='row'>
+			<div  id="FirstPageContainer" >
+				<div  className='row'>
 					<div className='btn-layout col-sm-12' style={{display: 'flex',justifyContent:'flex-end'}}>
 						{ // For Home Page when minorSelection has content in it
 						this.props.pageState == PAGE_STATE["Home"] && this.props.minorSelections.length != 0 &&
@@ -290,7 +291,7 @@ class P5Page extends React.Component {
 					}}
 					planetName={this.state.hoverMinorPlanetName}>
 				</MinorDescription>
-				<div ref={this.myRef} className="p5Container"></div>
+				<div ref={this.myRef} className="p5Container back"></div>
 				<div>
 					<MinorTags
 						minorSelections={this.props.minorSelections}
@@ -305,7 +306,7 @@ class P5Page extends React.Component {
 
 const MinorDescription = (props) => {
     return (
-        <div id="MinorDescription" style={props.style}>
+        <div  id="MinorDescription" style={props.style}>
 			<h1> {props.planetName} </h1>
             {/* <p> {MINOR_DESCRIPTION_FIRST_PAGE[props.planetName]} </p> */}
         </div>
